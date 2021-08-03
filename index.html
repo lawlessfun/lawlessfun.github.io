@@ -1,0 +1,244 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="No Rules, 100% Vanilla, Anarchy Minecraft Server">
+		<meta name="keywords" content="Lawless Fun is a 100% Vanilla, Anarchy Minecraft server, a place where there's no mods, no rules, and lots of fun. Join today at play.lawless.fun!">
+		<meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1'>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+		<title>Lawless Fun - The Best No Rules Vanilla Anarchy Minecraft Server!</title>
+		<style>
+			html {
+				overflow-x: hidden;
+				background-color: black;
+			}
+		
+			body {
+				margin:0;
+			}
+			
+			.buttons {
+				font-size: 26px;
+			}
+			
+			.footer-text {
+				font-size: 12px;
+				text-align: center; color: black;
+				margin: 0px;
+				margin-bottom: 10px;
+				font-family: 'Quicksand', sans-serif;
+			}
+			
+			h2 {
+				font-size: 70px;
+			}
+			
+			h3 {
+				font-size: 22px;
+			}
+			
+			.accordion {
+				border: none;
+				outline: none;
+				background: none;
+				transition: 0.4s;
+				font-size: 20px;
+			}
+			
+			.accordion:after {
+				content: "";
+				font-size: 20px;
+				float: right;
+				margin-left: 5px;
+			}
+
+			.active:after {
+				content: "";
+			}
+			
+			.accordion:hover {
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			
+			.details-button {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.panel {
+				padding: 0px 18px;
+				background-color: black;
+				overflow: hidden;
+				max-height: 0;
+				transition: max-height 0.2s ease-out;
+			}
+			
+			.content {
+				height: 90%;
+				display: flex;
+				flex-flow: wrap;
+				align-items: center;
+				justify-content: center;
+				padding-bottom: 140px;
+			}
+			
+			.break {
+				flex-basis: 100%;
+				transition: height 0.1s ease-out;
+			}
+			
+			.centered {
+				overflow-x: hidden;
+				width: 100%;
+				max-width: 500px;
+			}
+			
+			@media only screen and (max-width: 600px) {
+				.buttons {
+					font-size: 20px;
+				}
+				
+				h2 {
+					font-size: 70px;
+				}
+				
+				h3 {
+					font-size: 25px;
+				}
+				
+				p {
+					font-size: 14px;
+				}
+			}
+			
+			@media only screen and (max-width: 350px) {
+				.buttons {
+					font-size: 20px;
+				}
+				
+				h2 {
+					font-size: 60px;
+				}
+				
+				h3 {
+					font-size: 20px;
+				}
+				
+				p {
+					font-size: 12px;
+				}
+			}
+			
+			@media only screen and (max-width: 280px) {
+				.buttons {
+					font-size: 15px;
+				}
+				
+				h2 {
+					font-size: 50px;
+				}
+				
+				h3 {
+					font-size: 16px;
+				}
+				
+				p {
+					font-size: 10px;
+				}
+			}
+			
+			.text {
+				text-align: center; color: white;
+				margin: 0px;
+				font-family: 'Quicksand', sans-serif;
+			}
+
+			.ip {
+				font-size: 40px;
+				text-decoration: underline;
+				text-underline-offset: 4px;
+			}
+			
+			.bold {
+				font-weight: bold;
+			}
+			
+			.gap-top-10 {
+				margin-top: 10px;
+			}
+			
+			.gap-top-20 {
+				margin-top: 20px;
+			}
+			
+			.gap-top-30 {
+				margin-top: 30px;
+			}
+			
+			.footer {
+				position:fixed;
+				bottom:0;
+				height:80px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 100%;
+				background: black;
+				color: white;
+			}
+		</style>
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div id="content" class="content">
+			<div class="centered">
+				<div>
+					<img style="display: block; margin: auto; padding-right: 15px;" src="./logo.png" width="150px" alt="Lawless Fun">
+				</div>
+				<h2 class="text">Lawless Fun</h2>
+				<h3 class="text">No Rules, 100% Vanilla, Anarchy Minecraft Server</h3>
+				<div class="gap-top-30" style="text-align: center;">
+					<p class="text">Here's the IP Address:</p>
+					<h3 class="text ip">play.lawless.fun</h3>
+				</div>
+				
+				<div class="gap-top-30" style="position: absolute; width: 100%; max-width: 500px;">
+					<div class="details-button">
+						<button id="accordion" class="accordion text bold">Donators</button>
+					</div>
+					<div id="details" class="panel" style="margin-bottom: 60px;">
+						<div>
+							<h4 class="text bold gap-top-10">Still waiting for donations :(</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<div class="footer">
+				<p class="text">Got an issue? That's unfortunate, there is no support.</p>
+				<p class="text">Send Bitcoin Cash to cover server costs bitcoincash:qz3ms2zpvm35cke0c3efue5jqzc264ltf5xuj9hdqz</p>
+				<p class="text gap-top-10">© Lawless Fun 2021</p>
+			</div>
+		</div>
+		
+		<script>
+			let acc = document.getElementById("accordion");
+			let breaker = document.getElementById("breaker");
+			let i;
+
+			acc.addEventListener("click", function() {
+				this.classList.toggle("active");
+				let panel = document.getElementById("details");
+				if (panel.style.maxHeight) {
+					panel.style.maxHeight = null;
+				} else {
+					panel.style.maxHeight = panel.scrollHeight + "px";
+				}
+			});
+		</script>
+	</body>
+	
+</html>
